@@ -1,9 +1,7 @@
 <template>
-	<view class="home">
-		<u-navbar :is-back="false" title="首页" :background="background" title-color="white" title-size="35"></u-navbar>
-		<view class="main">
-			123
-		</view>
+	<view class="chat">
+		<u-navbar :is-back="false" title="聊天室" :background="background" title-color="white" title-size="35"></u-navbar>
+		chat
 		<u-tabbar :list="list" active-color="#2979ff"></u-tabbar>
 	</view>
 </template>
@@ -12,7 +10,7 @@
 	import { allBar } from "../../common/mixins.js"
 	import { mapState } from "vuex"
 	export default {
-		data() {
+		data(){
 			return {
 				
 			}
@@ -22,14 +20,8 @@
 			
 		},
 		computed: {}
-		// methods: {
-		// 	click(index){
-		// 		console.log(index);
-		// 	}
-		// }
 	}
 </script>
 
-<style lang="scss">
-
+<style>
 </style>
