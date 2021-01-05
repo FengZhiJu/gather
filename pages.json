@@ -7,18 +7,8 @@
 			"path": "pages/index/index"
 		},
 		{
-			"path": "pages/plan/plan"
-		},
-		{
-			"path": "pages/find/find"
-		},
-		{
-			"path": "pages/chat/chat"
-		},
-		{
-			"path": "pages/profile/profile"
+			"path": "pages/test/new_file"
 		}
-		
 	],
 	"globalStyle": {
 		"navigationStyle": "custom" ,// 隐藏系统导航栏
@@ -26,24 +16,6 @@
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
-	},
-	"tabBar": {
-		"list": [
-			{
-				"pagePath": "pages/index/index"
-			},
-			{
-				"pagePath": "pages/plan/plan"
-			},
-			{
-				"pagePath": "pages/find/find"
-			},
-			{
-				"pagePath": "pages/chat/chat"
-			},
-			{
-				"pagePath": "pages/profile/profile"
-			}
-		]
 	}
+
 }
