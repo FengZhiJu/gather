@@ -13,7 +13,7 @@
 </script>
 
 <style lang="scss">
+	// /*每个页面公共css */
 	@import "@/components/uview-ui/index.scss";
 	@import "@/static/css/base.css"
-	/*每个页面公共css */
 </style>

@@ -3,9 +3,9 @@
 		<view :class="{'navbar-right': true, 'rotate': isRodate}"  @tap="addButtonToggle">
 			<u-icon name="plus" color="#fff" size="35"></u-icon>
 		</view>
-		<animation-list :list="['添加计划']" :opacity="opacity" @optionsClick='optionsClick'></animation-list>
+		<animation-list :list="['添加一个计划']" :opacity="opacity" @optionsClick='optionsClick'></animation-list>
 	</view>
-</template>
+</template>                   
 
 <script>
 	import AnimationList from "@/components/animationList.vue"
@@ -19,7 +19,7 @@
 				opacity: 0
 			}
 		},
-		onLoad() {
+		onLoad(params) {
 			
 		},
 		props: {},
@@ -28,10 +28,11 @@
 			addButtonToggle(){
 				this.isRodate = !this.isRodate;
 				this.opacity = new Number(this.isRodate);
-				this.$emit('addButtonToggle')
+				this.$emit('addButtonToggle');
 			},
 			optionsClick(index){
 				console.log(index);
+				// if(index == 0) this.$Router.push({name: 'addPlan'});
 				this.addButtonToggle();
 			}
 		}

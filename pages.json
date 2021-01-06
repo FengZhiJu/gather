@@ -7,7 +7,7 @@
 			"path": "pages/index/index"
 		},
 		{
-			"path": "pages/test/new_file"
+			"path": "pages/addPlan/addPlan"
 		}
 	],
 	"globalStyle": {

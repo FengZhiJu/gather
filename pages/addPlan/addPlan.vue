@@ -1,17 +1,17 @@
 <template>
 	<view class="test">
-		<u-navbar :is-back="true" title="test" :background="background" title-color="white" title-size="35" back-icon-color="#fff" ></u-navbar>
-		123
+		<u-navbar :is-back="true" title="添加计划" :background="background" title-color="white" title-size="35" back-icon-color="#fff" ></u-navbar>
+		
 	</view>
 </template>
 
 <script>
-	import { allBar } from "../../common/mixins.js"
+	import { navBar } from "../../common/mixins.js"
 	export default {
 		components: {
 
 		},
-		mixins: [allBar],
+		mixins: [navBar],
 		data() {
 			return {
 				

@@ -8,10 +8,10 @@
 				<view class="kg-text">当前</view>
 			</view>
 			<view class="progress">
-				<u-circle-progress active-color="#fff" :percent="80" bg-color="#2a91ff" inactive-color="rgba(255,255,255,.2)" :duration="400">
+				<u-circle-progress active-color="#fff" :percent="percent" bg-color="#2a91ff" inactive-color="rgba(255,255,255,.2)" :duration="400">
 					<view class="u-progress-content">
-						<u-count-to :end-val="diffKg" color="#fff" decimals="1" :bold="true" :font-size="40" :duration="duration"></u-count-to>
-						<view class='u-progress-info'>已减去</view>
+						<u-count-to :end-val="finishDiffKg" color="#fff" decimals="1" :bold="true" :font-size="40" :duration="duration"></u-count-to>
+						<view class='u-progress-info'>{{diffTitle}}</view>
 					</view>
 				</u-circle-progress>
 			</view>
@@ -30,16 +30,32 @@
 		},
 		data() {
 			return {
-				currentKg: 106.6,
-				targetKg: 90,
-				diffKg: 30,
+				baseKg: 126.4,
+				currentKg: 114.7,
+				targetKg: 90.4,
 				duration: 1000
 			}
 		},
-		onLoad() {
-			
+		created() {
+			console.log(this.finishDiffKg, ' ', this.needDiffKg)
 		},
-		computed: {},
+		computed: {
+			addORremove(){
+				return this.baseKg > this.targetKg ? true : false;
+			},
+			finishDiffKg(){
+				return this.addORremove ? this.baseKg - this.currentKg : this.currentKg - this.baseKg;
+			},
+			needDiffKg(){
+				return this.addORremove ? this.baseKg - this.targetKg : this.targetKg - this.baseKg;
+			},
+			diffTitle(){
+				return this.addORremove ? '已减脂' : '已增肌';
+			},
+			percent(){
+				return this.finishDiffKg / this.needDiffKg * 100;
+			}
+		},
 		methods: {}
 	}
 </script>

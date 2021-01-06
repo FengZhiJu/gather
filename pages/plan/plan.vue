@@ -1,11 +1,15 @@
 <template>
 	<view class="plan">
-		plan
+		<plan-list></plan-list>
 	</view>
 </template>
 
 <script>
+	import PlanList from "./children/planList.vue"
 	export default {
+		components: {
+			PlanList
+		},
 		data() {
 			return {
 				
