@@ -37,7 +37,7 @@
 			}
 		},
 		created() {
-			console.log(this.finishDiffKg, ' ', this.needDiffKg)
+			// console.log(this.finishDiffKg, ' ', this.needDiffKg)
 		},
 		computed: {
 			addORremove(){
